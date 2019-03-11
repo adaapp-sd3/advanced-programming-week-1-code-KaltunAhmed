@@ -4,7 +4,7 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 2rem;
+  height: 4rem;
   pointer-events: none;
 }
 
@@ -23,9 +23,9 @@
   color: #61dafb;
 }
 .Task{
-  background: grey;
-  width: 50%;
-  margin: 10px auto;
+  background: #4e7fc4;
+  width: 40%;
+  margin: 30px auto;
   border-radius: 3px;
   padding: 10px;
 }

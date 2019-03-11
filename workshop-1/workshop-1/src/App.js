@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Tasks from './Tasks/Task.js';
+import Task from './Tasks/Task.js';
 
 const dummyTaskData = 
 [
@@ -27,9 +28,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <section>
-        <Tasks title = "Go Shopping" description = "Buy some food"/>
-        <Tasks title = "Cook Dinner" description = "Cook some of the food you bought"/>
-        <Tasks title = "Eat dinner"  description = "Eat the dinner you've eaten"/>
+         {dummyTaskData.map(item => <Task title = {item.title} description = {item.description}/>)}
         </section>
       </div>
     );
