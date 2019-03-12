@@ -6,9 +6,6 @@ class Task extends Component {
     this.state = {
       accepted: false
     };
-    this.state = {
-      nameOfClass: "Task-NotAccepted"
-    }
   }
 
   handleAcceptTask = () => {
@@ -16,17 +13,19 @@ class Task extends Component {
       accepted: !this.state.accepted
     });
   }
-  taskClassName = () => {
-    if (this.state.accepted === true){
+
+  taskClassName = (nameOfClass) => {
+    if (this.state.accepted){
       nameOfClass = "TaskAccepted"
     } else {
       nameOfClass = "Task-NotAccepted"
     }
+    return this.taskClassName('')
   }
 
   render() {
     return (
-      <div className={nameOfClass}>
+      <div className={this.taskClassName}>
         <h2>{this.props.title}</h2>
         <p>{this.props.description}</p>
         {this.state.accepted && <p>This task has been accepted</p>}
